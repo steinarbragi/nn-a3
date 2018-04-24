@@ -9,16 +9,27 @@ import argparse
 import os
 import random
 import numpy as np
-import cv2
 from keras.models import Model
-from keras.applications import applications
-from keras.preprocessing import image as image_utils
-from keras.applications.vgg16 import preprocess_input
+from keras.preprocessing import image
+import keras.applications.resnet50 as res
 
 
-model = applications.vgg16.VGG16(weights="imagenet")
 
 def main():
+
+    model = res.ResNet50(weights='imagenet')
+
+    img_path = 'images/test/badger.jpg'
+
+    img = image.load_img(img_path, target_size=(224, 224))
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x = res.preprocess_input(x)
+
+    preds = model.predict(x)
+    print('Predicted:', res.decode_predictions(preds))
+
+"""
     ap = argparse.ArgumentParser()
     ap.add_argument("-f", "--folder", required=True)
     args = vars(ap.parse_args())
@@ -32,6 +43,6 @@ def main():
         image = image.transpose((2, 0, 1))
         image = preprocess_input(image)
 
-
+"""
 if __name__ == '__main__':
     main()
