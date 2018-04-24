@@ -1,6 +1,6 @@
-# Real Time Object Classification
+# Real Time Object Recognition
 
-Using keras and the VGG16 model
+Using keras, ResNet50 and the VGG16 model
 
 
 
@@ -11,6 +11,5 @@ http://www.vision.caltech.edu/Image_Datasets/Caltech101/
 https://chunml.github.io/ChunML.github.io/project/Real-Time-Object-Recognition-part-one/
 
 ## example repo:
-https://github.com/ChunML/DeepLearning.git
+https://github.com/ChunML/DeepLearning.git (added here as a submodule)
 
-I've added this sample repo as a submodule. 

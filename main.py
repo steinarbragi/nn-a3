@@ -1,8 +1,6 @@
 
 # dataset: http://www.vision.caltech.edu/Image_Datasets/Caltech101/
-
 # blogpost: https://chunml.github.io/ChunML.github.io/project/Real-Time-Object-Recognition-part-one/
-
 # example: https://github.com/ChunML/DeepLearning.git
 
 import argparse
@@ -12,8 +10,6 @@ import numpy as np
 from keras.models import Model
 from keras.preprocessing import image
 import keras.applications.resnet50 as res
-
-
 
 def main():
 
