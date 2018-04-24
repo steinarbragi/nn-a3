@@ -3,6 +3,7 @@
 
 # blogpost: https://chunml.github.io/ChunML.github.io/project/Real-Time-Object-Recognition-part-one/
 
+# example: https://github.com/ChunML/DeepLearning.git
 
 import argparse
 import os
